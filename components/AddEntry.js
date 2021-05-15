@@ -29,7 +29,7 @@ function SubmitBtn({ onPress }) {
       }
       onPress={onPress}
     >
-      <Text styles={styles.submitBtnText}>SUBMIT</Text>
+      <Text style={styles.submitBtnText}>SUBMIT</Text>
     </TouchableOpacity>
   );
 }
@@ -37,10 +37,10 @@ function SubmitBtn({ onPress }) {
 class AddEntry extends Component {
   state = {
     run: 0,
-    bike: 10,
-    swim: 5,
+    bike: 0,
+    swim: 0,
     sleep: 0,
-    eat: 20,
+    eat: 0,
   };
   submit = () => {
     const key = timeToString();
@@ -191,11 +191,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   center: {
-    flex: 1,
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     marginLeft: 30,
     marginRight: 30,
+    borderWidth: 3,
+    borderColor: "black",
+    flex: 1,
   },
 });
 
